@@ -38,6 +38,12 @@ func NewCdn(config config.Config) *Cdn {
 				UserName: config.GetString("cdn.kuocai.username"),
 				PassWord: config.GetString("cdn.kuocai.password"),
 			})
+		case "goedge":
+			drivers = append(drivers, &GoEdge{
+				API:         config.GetString("cdn.goedge.api"),
+				AccessKeyID: config.GetString("cdn.goedge.access_key_id"),
+				AccessKey:   config.GetString("cdn.goedge.access_key"),
+			})
 		}
 	}
 

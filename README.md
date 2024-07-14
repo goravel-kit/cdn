@@ -1,3 +1,3 @@
 # CDN
 
-CDN package for Goravel, support CloudFlare, BaiShan, Huawei, KuoCai.
+CDN package for Goravel, support CloudFlare, BaiShan, Huawei, KuoCai, GoEdge.
