@@ -56,28 +56,7 @@ type GoEdgeUsageResponse struct {
 
 // RefreshUrl 刷新URL
 func (r *GoEdge) RefreshUrl(urls []string) error {
-	client, err := r.getClient()
-	if err != nil {
-		return err
-	}
-
-	var refreshResponse GoEdgeCommonResponse
-	_, err = client.R().SetBodyJsonMarshal(map[string]any{
-		"type":    "purge",
-		"keyType": "key",
-		"keys":    urls,
-	}).
-		SetSuccessResult(&refreshResponse).
-		Post("/HTTPCacheTaskService/createHTTPCacheTask")
-	if err != nil {
-		return err
-	}
-
-	if refreshResponse.Code != 200 {
-		return fmt.Errorf("URL刷新失败: %s", refreshResponse.Message)
-	}
-
-	return nil
+	return r.RefreshPath(urls)
 }
 
 // RefreshPath 刷新路径
@@ -100,7 +79,7 @@ func (r *GoEdge) RefreshPath(paths []string) error {
 	}
 
 	if refreshResponse.Code != 200 {
-		return fmt.Errorf("路径刷新失败: %s", refreshResponse.Message)
+		return fmt.Errorf("刷新失败: %s", refreshResponse.Message)
 	}
 
 	return nil
