@@ -3,7 +3,7 @@ module github.com/goravel-kit/cdn
 go 1.22
 
 require (
-	github.com/cloudflare/cloudflare-go/v2 v2.3.0
+	github.com/cloudflare/cloudflare-go/v2 v2.4.0
 	github.com/goravel/framework v1.14.3
 	github.com/huaweicloud/huaweicloud-sdk-go-v3 v0.1.105
 	github.com/imroc/req/v3 v3.43.7
