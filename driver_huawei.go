@@ -17,10 +17,6 @@ type HuaWei struct {
 
 // RefreshUrl 刷新URL
 func (r *HuaWei) RefreshUrl(urls []string) error {
-	for i, url := range urls {
-		urls[i] = "https://" + url
-	}
-
 	auth, err := global.NewCredentialsBuilder().
 		WithAk(r.AccessKey).
 		WithSk(r.SecretKey).
@@ -64,10 +60,6 @@ func (r *HuaWei) RefreshUrl(urls []string) error {
 
 // RefreshPath 刷新路径
 func (r *HuaWei) RefreshPath(paths []string) error {
-	for i, url := range paths {
-		paths[i] = "https://" + url
-	}
-
 	auth, err := global.NewCredentialsBuilder().
 		WithAk(r.AccessKey).
 		WithSk(r.SecretKey).

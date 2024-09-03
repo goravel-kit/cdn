@@ -30,10 +30,6 @@ func (b *BaiShan) RefreshUrl(urls []string) error {
 	client := req.C()
 	client.SetTimeout(60 * time.Second)
 
-	for i, url := range urls {
-		urls[i] = "https://" + url
-	}
-
 	refreshURL := "https://cdn.api.baishan.com/v2/cache/refresh?token=" + b.Token
 	data := map[string]any{
 		"urls": urls,
@@ -57,10 +53,6 @@ func (b *BaiShan) RefreshUrl(urls []string) error {
 func (b *BaiShan) RefreshPath(paths []string) error {
 	client := req.C()
 	client.SetTimeout(60 * time.Second)
-
-	for i, path := range paths {
-		paths[i] = "https://" + path
-	}
 
 	refreshURL := "https://cdn.api.baishan.com/v2/cache/refresh?token=" + b.Token
 	data := map[string]any{

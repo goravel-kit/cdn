@@ -66,10 +66,6 @@ func (r *GoEdge) RefreshPath(paths []string) error {
 		return err
 	}
 
-	for i, path := range paths {
-		paths[i] = "https://" + path
-	}
-
 	var refreshResponse GoEdgeCommonResponse
 	_, err = client.R().SetBodyJsonMarshal(map[string]any{
 		"type":    "purge",

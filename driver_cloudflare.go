@@ -3,6 +3,7 @@ package cdn
 import (
 	"context"
 	"fmt"
+	"strings"
 	"time"
 
 	"github.com/cloudflare/cloudflare-go/v2"
@@ -47,6 +48,11 @@ func (s *CloudFlare) RefreshUrl(urls []string) error {
 		option.WithAPIKey(s.Key),
 		option.WithAPIEmail(s.Email),
 	)
+
+	for i, url := range urls {
+		urls[i] = strings.TrimPrefix(url, "https://")
+		urls[i] = strings.TrimPrefix(url, "http://")
+	}
 
 	var newUrls cache.CachePurgeParamsBodyCachePurgeSingleFile
 	newUrls.Files = cloudflare.F(urls)

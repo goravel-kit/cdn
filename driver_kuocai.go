@@ -4,7 +4,8 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"net/url"
+	neturl "net/url"
+	"strings"
 	"time"
 
 	"github.com/goravel/framework/support/carbon"
@@ -53,9 +54,14 @@ func (r *KuoCai) RefreshUrl(urls []string) error {
 		return err
 	}
 
+	for i, url := range urls {
+		urls[i] = strings.TrimPrefix(url, "https://")
+		urls[i] = strings.TrimPrefix(url, "http://")
+	}
+
 	// 提交刷新请求
 	var refreshResponse KuoCaiCommonResponse
-	_, err = client.R().SetFormDataFromValues(url.Values{
+	_, err = client.R().SetFormDataFromValues(neturl.Values{
 		"urls[]": urls,
 		"type":   {"file"},
 	}).
@@ -79,9 +85,14 @@ func (r *KuoCai) RefreshPath(paths []string) error {
 		return err
 	}
 
+	for i, path := range paths {
+		paths[i] = strings.TrimPrefix(path, "https://")
+		paths[i] = strings.TrimPrefix(path, "http://")
+	}
+
 	// 提交刷新请求
 	var refreshResponse KuoCaiCommonResponse
-	_, err = client.R().SetFormDataFromValues(url.Values{
+	_, err = client.R().SetFormDataFromValues(neturl.Values{
 		"urls[]": paths,
 		"type":   {"directory"},
 	}).
