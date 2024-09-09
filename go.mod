@@ -3,11 +3,11 @@ module github.com/goravel-kit/cdn
 go 1.22
 
 require (
-	github.com/cloudflare/cloudflare-go/v2 v2.3.0
-	github.com/goravel/framework v1.14.3
+	github.com/cloudflare/cloudflare-go/v2 v2.4.0
+	github.com/goravel/framework v1.14.5
 	github.com/huaweicloud/huaweicloud-sdk-go-v3 v0.1.105
-	github.com/imroc/req/v3 v3.43.7
-	github.com/spf13/cast v1.6.0
+	github.com/imroc/req/v3 v3.44.0
+	github.com/spf13/cast v1.7.0
 )
 
 require (
@@ -94,7 +94,7 @@ require (
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/kelseyhightower/envconfig v1.4.0 // indirect
-	github.com/klauspost/compress v1.17.7 // indirect
+	github.com/klauspost/compress v1.17.8 // indirect
 	github.com/lib/pq v1.10.9 // indirect
 	github.com/lithammer/fuzzysearch v1.1.8 // indirect
 	github.com/lucasb-eyer/go-colorful v1.2.0 // indirect
