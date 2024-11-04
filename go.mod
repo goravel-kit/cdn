@@ -1,12 +1,13 @@
 module github.com/goravel-kit/cdn
 
-go 1.22
-toolchain go1.22.5
+go 1.22.0
+
+toolchain go1.23
 
 require (
 	github.com/cloudflare/cloudflare-go/v2 v2.4.0
+	github.com/devhaozi/huaweicloud-sdk-go-v3 v0.0.0-20241018211007-bbebb6de5db7
 	github.com/goravel/framework v1.14.7
-	github.com/huaweicloud/huaweicloud-sdk-go-v3 v0.1.105
 	github.com/imroc/req/v3 v3.48.0
 	github.com/spf13/cast v1.7.0
 )
@@ -93,7 +94,6 @@ require (
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
-	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/kelseyhightower/envconfig v1.4.0 // indirect
 	github.com/klauspost/compress v1.17.9 // indirect
 	github.com/lib/pq v1.10.9 // indirect
@@ -105,8 +105,6 @@ require (
 	github.com/mattn/go-runewidth v0.0.15 // indirect
 	github.com/microsoft/go-mssqldb v1.6.0 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
-	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
-	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/montanaflynn/stats v0.7.0 // indirect
 	github.com/muesli/ansi v0.0.0-20230316100256-276c6243b2f6 // indirect
 	github.com/muesli/cancelreader v0.2.2 // indirect
@@ -143,7 +141,6 @@ require (
 	github.com/tidwall/match v1.1.1 // indirect
 	github.com/tidwall/pretty v1.2.1 // indirect
 	github.com/tidwall/sjson v1.2.5 // indirect
-	github.com/tjfoc/gmsm v1.4.1 // indirect
 	github.com/urfave/cli/v2 v2.27.2 // indirect
 	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
 	github.com/xdg-go/scram v1.1.2 // indirect
@@ -192,5 +189,3 @@ require (
 	modernc.org/memory v1.7.2 // indirect
 	modernc.org/sqlite v1.28.0 // indirect
 )
-
-replace github.com/huaweicloud/huaweicloud-sdk-go-v3 => github.com/devhaozi/huaweicloud-sdk-go-v3 v0.1.85-0.20240306131341-3bfacd6a8e63

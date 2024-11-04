@@ -3,11 +3,11 @@ package cdn
 import (
 	"fmt"
 
+	"github.com/devhaozi/huaweicloud-sdk-go-v3/core/auth/global"
+	cdn "github.com/devhaozi/huaweicloud-sdk-go-v3/services/cdn/v2"
+	"github.com/devhaozi/huaweicloud-sdk-go-v3/services/cdn/v2/model"
+	"github.com/devhaozi/huaweicloud-sdk-go-v3/services/cdn/v2/region"
 	"github.com/goravel/framework/support/carbon"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/global"
-	cdn "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cdn/v2"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cdn/v2/model"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cdn/v2/region"
 	"github.com/spf13/cast"
 )
 
